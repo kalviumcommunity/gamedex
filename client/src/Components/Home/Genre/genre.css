@@ -1,0 +1,130 @@
+.container_gen {
+    background-image: url("../../../assets/bg-gen.png");
+    background-size: cover;
+    height: 62vh;
+    margin-left: 3%;
+}
+
+.heading_gen {
+    margin-top: 5%;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7vh;
+    margin-top: 5vh;
+}
+
+.card-img {
+    height: 10vh;
+}
+
+.genre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 10vh;
+    width: 15vw;
+    transition: background-color 1s;
+    background: linear-gradient(90deg, #F70101, transparent) #2195f300;
+}
+
+.action:hover,
+.action:focus {
+    background-color: #c601f7c6;
+    color: #fff;
+}
+
+.racing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 10vh;
+    width: 15vw;
+    transition: background-color 1s;
+    background: linear-gradient(90deg, #FF5F00, transparent) #2195f300;
+}
+
+.racing:hover,
+.racing:focus {
+    background-color: #eeee27dd;
+    color: #fff;
+}
+
+.horror {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 10vh;
+    width: 15vw;
+    transition: background-color 1s;
+    background: linear-gradient(90deg, #000000, transparent) #2195f300;
+}
+
+.horror:hover,
+.horror:focus {
+    background-color: #0048ff8a;
+    color: #fff;
+}
+
+.survival {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 10vh;
+    width: 15vw;
+    transition: background-color 1s;
+    background: linear-gradient(90deg, #30240b, transparent) #2195f300;
+}
+
+.survival:hover,
+.survival:focus {
+    background-color: #749c36;
+    color: #fff;
+}
+
+.sports {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 10vh;
+    width: 15vw;
+    transition: background-color 1s;
+    background: linear-gradient(90deg, green, transparent) #2195f300;
+}
+
+.sports:hover,
+.sports:focus {
+    background-color: yellow;
+    color: #fff;
+}
+
+.adventure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 10vh;
+    width: 15vw;
+    transition: background-color 1s;
+    background: linear-gradient(90deg, #3e81ad, transparent) #2195f300;
+}
+
+.adventure:hover,
+.adventure:focus {
+    background-color: skyblue;
+    color: #fff;
+}

@@ -23,7 +23,6 @@ function Carousel() {
       <h1 className="heading">Most Popular Games</h1>
       <Swiper
         effect={'coverflow'}
-        grabCursor={true}
         centeredSlides={true}
         loop={true}
         slidesPerView={'auto'}
@@ -33,7 +32,7 @@ function Carousel() {
           depth: 100,
           modifier: 2.5,
         }}
-        pagination={{ el: '.swiper-pagination', clickable: true }}
+        pagination={{ el: '.swiper-pagination', clickable: false }}
         navigation={{
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -47,26 +46,26 @@ function Carousel() {
         className="swiper_container"
       >
         <SwiperSlide>
-                    <img src={slide_image_1} alt="slide_image" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide_image_2} alt="slide_image" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide_image_3} alt="slide_image" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide_image_4} alt="slide_image" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide_image_5} alt="slide_image" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide_image_6} alt="slide_image" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide_image_7} alt="slide_image" />
-                </SwiperSlide>
+          <img src={slide_image_1} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide_image_2} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide_image_3} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide_image_4} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide_image_5} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide_image_6} alt="slide_image" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={slide_image_7} alt="slide_image" />
+        </SwiperSlide>
 
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">

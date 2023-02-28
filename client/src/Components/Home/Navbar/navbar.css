@@ -20,7 +20,7 @@
     box-sizing: border-box;
     border:none;
     text-decoration: none;
-    transition:all .2s linear;
+    transition:all .2s;
 }
 
 
@@ -44,7 +44,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 4vh;
+    height: 5vh;
 }
 
 
@@ -83,7 +83,7 @@ html{
 }
 
  .search input{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     padding:0 1.2rem;
     height:100%;
     width:100%;
@@ -263,6 +263,18 @@ footer .menu li a:hover{
     }
 }
 
+@media (max-width:590px){
+    .nav-button{
+        font-size:1em;
+    }
+}
+
+@media (max-width:500px){
+    .nav-button{
+        font-size:0.8em;
+    }
+}
+
 @media (max-width:450px){
 
     html{
@@ -272,7 +284,7 @@ footer .menu li a:hover{
         padding:2.5rem;
     }
     .nav-button{
-        font-size:1rem;
+        font-size:0.6rem;
      }
 
 }

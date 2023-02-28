@@ -16,7 +16,6 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 
 @media (min-width: 1440px) {
@@ -38,10 +37,12 @@ html {
 }
 
 .container {
-  max-width: 124rem;
+  max-width: 102rem;
   padding: 4rem 1rem;
   margin: 0 auto;
   background-image: url("../../../assets/bg-nav.png");
+  max-height: 62vh;
+  background-size: cover;
 }
 
 .heading {
