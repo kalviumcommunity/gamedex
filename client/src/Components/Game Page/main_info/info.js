@@ -1,15 +1,6 @@
 import './info.css';
 
-import slide_image_1 from '../../assets/watch.png';
-import slide_image_2 from '../../assets/racing.png';
-import slide_image_3 from '../../assets/horror.png';
-import slide_image_4 from '../../assets/survival.png';
-import slide_image_5 from '../../assets/sports.png';
-import slide_image_6 from '../../assets/adventure.png';
-import slide_image_7 from '../../assets/strategy.png';
-import slide_image_8 from '../../assets/fighting.png';
-import slide_image_9 from '../../assets/world.png';
-
+import slide_image_1 from '../../../assets/watch.png';
 
 function info() {
   return (
