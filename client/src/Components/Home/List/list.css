@@ -1,0 +1,37 @@
+.container_list {
+    background-image: url("../../../assets/bg-list.png");
+    background-size: cover;
+    height: 62vh;
+    margin-left: 3%;
+}
+
+.heading_list {
+    margin-top: 5%;
+}
+
+.hilightes{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6vh;
+    margin-top: 5vh;
+}
+
+.game-img {
+    height: 25vh;
+    width: 10vw;
+}
+
+.genre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recommended {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6vh;
+    margin-top: 5vh;
+}

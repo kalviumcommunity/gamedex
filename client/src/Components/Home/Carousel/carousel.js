@@ -19,7 +19,7 @@ import slide_image_7 from '../../../assets/Uncharted.png';
 
 function Carousel() {
   return (
-    <div className="container">
+    <div className="container_carousel">
       <h1 className="heading">Most Popular Games</h1>
       <Swiper
         effect={'coverflow'}
