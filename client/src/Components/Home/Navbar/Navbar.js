@@ -1,33 +1,68 @@
 import './navbar.css';
-import { FaSearch, FaHome, FaTags, FaComments, FaList } from "react-icons/fa"
-import PersonIcon from '@mui/icons-material/Person';
+import { FaSearch } from "react-icons/fa"
 import image from '../../../assets/logo.png';
-
+import { MdClose } from "react-icons/md"
+import { useState } from 'react';
 
 
 
 
 function Navbar() {
 
-  const handleSearch = () => {
-    const searchForm = document.querySelector('.search');
-    searchForm.classList.toggle('active');
+  let searchBtn = document.querySelector('.searchBtn');
+  let closeBtn = document.querySelector('.closeBtn');
+  const searchBox = document.getElementById('search');
+  const [searchButton, setSearchButton] = useState(true)
+
+  const handleClick = () => {
+      setSearchButton(!searchButton)
   }
 
-  const handleHoverEnter = () => {
-    const abc = document.getElementById('navbar-links');
-    abc.classList.add('skewBackGround');
+  // const handleSearch = () => {
+  //   const searchForm = document.querySelector('.search');
+  //   searchForm.classList.toggle('active');
+  // }
 
-  }
-  const handleHoverLeave = () => {
-    const abc = document.getElementById('navbar-links');
-    abc.classList.remove('skewBackGround');
+  // const handleHoverEnter = () => {
+  //   const abc = document.getElementById('navbar-links');
+  //   abc.classList.add('skewBackGround');
 
-  }
+  // }
+  // const handleHoverLeave = () => {
+  //   const abc = document.getElementById('navbar-links');
+  //   abc.classList.remove('skewBackGround');
+
+  // }
   return (
     <>
-      <header className="header">
-        <div className='header-1'>
+      <div className='container_nav'>
+        <header className="header">
+          <div className='logo'>
+            <a href="#" id='websiteName'> <img src={image} className="logo-img" /> </a>
+          </div>
+          <div className="group">
+            <ul className="navigation">
+              <li><a href="#">Bookmarks</a></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+          </div>
+          <div className="search">
+            <span className="icon">
+              {searchButton ? <FaSearch onClick={handleClick} className='searchBtn' /> : <MdClose onClick={handleClick} className='closeBtn' />}
+            </span>
+          </div>
+          <div id='search' className={searchButton ? "searchBox" : "searchBox active"}>
+            <input type="text" placeholder='Search here . . .' />
+          </div>
+        </header>
+      </div>
+    </>
+  )
+}
+
+export default Navbar
+
+{/* <div className='header-1'>
           <div className='logo'>
             <a href="#" id='websiteName'> <img src={image} className="logo-img" /> </a>
           </div>
@@ -47,10 +82,4 @@ function Navbar() {
 
           </div>
 
-        </div>
-      </header>
-    </>
-  )
-}
-
-export default Navbar
+        </div> */}
