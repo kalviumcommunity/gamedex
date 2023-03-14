@@ -1,10 +1,9 @@
-import './navbar.css';
+import './Navbar.css';
 import { FaSearch } from "react-icons/fa"
 import image from '../../../assets/logo.png';
 import { MdClose } from "react-icons/md"
 import { useState } from 'react';
-
-
+import { Link } from "react-router-dom";
 
 
 function Navbar() {
@@ -38,12 +37,12 @@ function Navbar() {
       <div className='container_nav'>
         <header className="header">
           <div className='logo'>
-            <a href="#" id='websiteName'> <img src={image} className="logo-img" /> </a>
+            <p id='websiteName'> <img src={image} className="logo-img" /> </p>
           </div>
           <div className="group">
             <ul className="navigation">
-              <li><a href="#">Bookmarks</a></li>
-              <li><a href="#">Login</a></li>
+            <li><p>Bookmarks</p></li>
+              <Link to="/Login"><li><p>Login</p></li></Link>
             </ul>
           </div>
           <div className="search">

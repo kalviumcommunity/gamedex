@@ -1,6 +1,20 @@
-import "./loading.css"
+import { useEffect } from "react";
+import "./Loading.css"
 
-function loading() {
+function Loading() {
+    const Box = document.getElementsByClassName("loaderBox");
+
+    useEffect(() => {
+        setTimeout(() => {
+            let i = 0;
+            setInterval(() => {
+                if (i < 5) {
+                    i++;
+                    Box[i - 1].style.display = "block";
+                }
+            }, 700)
+        }, 700)
+    })
 
     return (
         <div className="container_loading">
@@ -20,4 +34,4 @@ function loading() {
     );
 }
 
-export default loading;
+export default Loading;

@@ -1,7 +1,7 @@
 import React from 'react'
-import Carousel from './Carousel/carousel'
-import Genre from './Genre/genre'
-import List from './List/list'
+import Carousel from './Carousel/Carousel'
+import Genre from './Genre/Genre'
+import List from './List/List'
 import Navbar from './Navbar/Navbar'
 
 const Home = () => {

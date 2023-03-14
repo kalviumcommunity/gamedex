@@ -1,9 +1,11 @@
 .container_loading{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 66.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 66.5vh;
-    background-image: url(../../assets/5xvepms9fbbi0bmh.jpg);
+    background-image: url("../../assets/bg_login.png");
 }
 
 .loaderContainer{
@@ -12,11 +14,15 @@
     width: 200px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 5px;
+    padding: 2px;
 }
 
 .loaderBox{
     background: white;
     height: 25px;
     width: 35px;
+    display: none;
+    animation: none;
 }

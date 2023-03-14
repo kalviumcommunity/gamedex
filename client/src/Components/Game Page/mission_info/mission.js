@@ -1,9 +1,20 @@
 import slide_image_1 from '../../../assets/watch.png';
-import './mission.css';
+import './Mission.css';
 import Navbar from '../../Home/Navbar/Navbar';
+import React,{ useState, useEffect } from 'react';
+import Loading from '../../Loading/Loading';
 
-function mission() {
-  return (
+function Mission() {
+  
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(()=>{
+    setTimeout(() => {
+        setIsLoading(false)
+    }, 5000);
+}, [])
+
+  return ( isLoading ? (<Loading />) :
     <>
       <Navbar />
       <div className='container_mission'>
@@ -16,4 +27,4 @@ function mission() {
   );
 }
 
-export default mission;
+export default Mission;

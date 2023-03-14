@@ -1,10 +1,10 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Info from './Components/Game Page/main_info/info'
-import Mission from './Components/Game Page/mission_info/mission'
-import Login from './Components/Login/login'
+import Info from './Components/Game Page/main_info/Info'
+import Mission from './Components/Game Page/mission_info/Mission'
+import Login from './Components/Login/Login'
 import Home from './Components/Home/Home';
-import Loading from './Components/Loading/loading'
+import Loading from './Components/Loading/Loading'
 
 function App() {
   return (

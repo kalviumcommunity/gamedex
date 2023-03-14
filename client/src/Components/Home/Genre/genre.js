@@ -1,4 +1,4 @@
-import './genre.css';
+import './Genre.css';
 
 import slide_image_1 from '../../../assets/action.png';
 import slide_image_2 from '../../../assets/racing.png';

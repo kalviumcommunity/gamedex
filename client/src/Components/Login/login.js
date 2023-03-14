@@ -1,22 +1,32 @@
-import './login.css';
+import './Login.css';
 import { FaFacebookF } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { FaGoogle } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa"
+import { useState, useEffect } from 'react';
+import Loading from '../Loading/Loading';
 
 
-function login() {
+function Login() {
 
     const signUp = () => {
         document.querySelector(".container_login").classList.add("sign-up-mode");
         console.log('signUp')
     };
 
+    const [isLoading, setIsLoading] = useState(true)
+
     const signIn = () => {
         document.querySelector(".container_login").classList.remove("sign-up-mode");
     };
 
-    return (
+    useEffect(()=>{
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 5000);
+    }, [])
+
+    return (isLoading ? (<Loading />) :
         <div className="container_login">
             <div className="forms-container">
                 <div className="signin-signup">
@@ -64,7 +74,7 @@ function login() {
                         <input type="submit" className="btn" value="Sign up" />
                         <p className="social-text">Or Sign up with social platforms</p>
                         <div className="social-media">
-                        <a href="#" className="social-icon">
+                            <a href="#" className="social-icon">
                                 <FaFacebookF />
                             </a>
                             <a href="#" className="social-icon">
@@ -113,4 +123,4 @@ function login() {
     );
 }
 
-export default login;
+export default Login;
