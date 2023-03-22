@@ -151,6 +151,53 @@ html{
     margin-top: 30%;
 }
 
+.menuToggle{
+    position: relative;
+    display: none;
+}
+
+@media (max-width: 800px){
+    .searchBtn{
+        left: 0;
+    }
+
+    .menuToggle{
+        position: absolute;
+        display: block;
+        font-size: 1.7em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+
+    .header .navigation{
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left: 100%;
+    }
+
+    .header.open .navigation{
+        top: 80px;
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: white;
+        width: 100%;
+        height: calc(100vh - 80px);
+        padding: 40px;
+        border-top: 1px solid rgba(0,0,0,.5);
+    }
+    
+    .header.open .navigation{
+        font-size: 1.25em;
+
+    }
+}
 
 
 /* .icons {

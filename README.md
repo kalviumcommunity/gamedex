@@ -1,2 +1,0 @@
-# gamedex
-<!-- This website is to describe a breif detailes of the games. It will help the gamers to know What is a particular game about, What missions are there in it, How to solve a mission in the easiest way and so on. It will also help them in knowing about details which dveelopers hide to let gamer exlpore. It will tell them public opinion on the game they are looking for. -->

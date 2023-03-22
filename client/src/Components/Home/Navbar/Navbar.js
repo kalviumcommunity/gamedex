@@ -2,19 +2,29 @@ import './Navbar.css';
 import { FaSearch } from "react-icons/fa"
 import image from '../../../assets/logo.png';
 import { MdClose } from "react-icons/md"
+import { FiMenu } from "react-icons/fi"
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 
 
 function Navbar() {
 
-  let searchBtn = document.querySelector('.searchBtn');
-  let closeBtn = document.querySelector('.closeBtn');
+  let searchBtn = document.getElementsByClassName('.searchBtn');
+  let closeBtn = document.getElementsByClassName('.closeBtn');
   const searchBox = document.getElementById('search');
   const [searchButton, setSearchButton] = useState(true)
 
   const handleClick = () => {
       setSearchButton(!searchButton)
+  }
+
+  let navigation = document.getElementsByClassName('navigation');
+  let menuToggle = document.getElementsByClassName('menuToggle');
+  let header = document.getElementsByClassName('header');
+
+  const handleMenuToggle = () => {
+    header[0].classList.toggle("header")
+    header[0].classList.toggle("open");
   }
 
   // const handleSearch = () => {
@@ -37,7 +47,7 @@ function Navbar() {
       <div className='container_nav'>
         <header className="header">
           <div className='logo'>
-            <p id='websiteName'> <img src={image} className="logo-img" /> </p>
+            <Link to = "/"><p id='websiteName'> <img src={image} className="logo-img" /></p></Link>
           </div>
           <div className="group">
             <ul className="navigation">
@@ -49,6 +59,7 @@ function Navbar() {
             <span className="icon">
               {searchButton ? <FaSearch onClick={handleClick} className='searchBtn' /> : <MdClose onClick={handleClick} className='closeBtn' />}
             </span>
+            <FiMenu className='menuToggle' onClick={handleMenuToggle}/>
           </div>
           <div id='search' className={searchButton ? "searchBox" : "searchBox active"}>
             <input type="text" placeholder='Search here . . .' />
