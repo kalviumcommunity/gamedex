@@ -1,22 +1,36 @@
-import './login.css';
+import './Login.css';
 import { FaFacebookF } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { FaGoogle } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa"
+import { useState, useEffect } from 'react';
+import Loading from '../Loading/Loading';
+import { Link } from "react-router-dom";
 
 
-function login() {
+function Login() {
 
     const signUp = () => {
         document.querySelector(".container_login").classList.add("sign-up-mode");
         console.log('signUp')
     };
 
+    const [isLoading, setIsLoading] = useState(true)
+
     const signIn = () => {
         document.querySelector(".container_login").classList.remove("sign-up-mode");
     };
 
-    return (
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 5000);
+    }, [])
+
+
+
+    return (isLoading ? (<Loading />) :
+    
         <div className="container_login">
             <div className="forms-container">
                 <div className="signin-signup">
@@ -30,21 +44,53 @@ function login() {
                             <i className="fas fa-lock"></i>
                             <input type="password" placeholder="Password" />
                         </div>
-                        <input type="submit" value="Login" className="btn solid" />
+                        <Link to = "/"><input type="submit" value="Login" className="btn-form solid" /></Link>                      
                         <p className="social-text">Or Sign in with social platforms</p>
                         <div className="social-media">
-                            <a href="#" className="social-icon">
-                                <FaFacebookF />
-                            </a>
-                            <a href="#" className="social-icon">
-                                <FaGithub />
-                            </a>
-                            <a href="#" className="social-icon">
-                                <FaGoogle />
-                            </a>
-                            <a href="#" className="social-icon">
-                                <FaLinkedin />
-                            </a>
+                            <div className='button-social'>
+                                <div className='outer-btn'>
+                                    <div className="btn transparent-social">
+                                        <button id="sign-up-btn" onClick={signIn}>
+                                            <p className="social-icon">
+                                                <FaFacebookF />
+                                            </p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='button-social'>
+                                <div className='outer-btn'>
+                                    <div className="btn transparent-social">
+                                        <button id="sign-up-btn" onClick={signIn}>
+                                            <p className="social-icon">
+                                                <FaGithub />
+                                            </p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='button-social'>
+                                <div className='outer-btn'>
+                                    <div className="btn transparent-social">
+                                        <button id="sign-up-btn" onClick={signIn}>
+                                            <p className="social-icon">
+                                                <FaGoogle />
+                                            </p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='button-social'>
+                                <div className='outer-btn'>
+                                    <div className="btn transparent-social">
+                                        <button id="sign-up-btn" onClick={signIn}>
+                                            <p className="social-icon">
+                                                <FaLinkedin />
+                                            </p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                     <form action="#" className="sign-up-form">
@@ -61,21 +107,53 @@ function login() {
                             <i className="fas fa-lock"></i>
                             <input type="password" placeholder="Password" />
                         </div>
-                        <input type="submit" className="btn" value="Sign up" />
+                        <input type="submit" className="btn-form" value="Sign up" />
                         <p className="social-text">Or Sign up with social platforms</p>
                         <div className="social-media">
-                        <a href="#" className="social-icon">
-                                <FaFacebookF />
-                            </a>
-                            <a href="#" className="social-icon">
-                                <FaGithub />
-                            </a>
-                            <a href="#" className="social-icon">
-                                <FaGoogle />
-                            </a>
-                            <a href="#" className="social-icon">
-                                <FaLinkedin />
-                            </a>
+                            <div className='button-social'>
+                                <div className='outer-btn'>
+                                    <div className="btn transparent-social">
+                                        <button id="sign-in-btn" onClick={signIn}>
+                                            <p className="social-icon">
+                                                <FaFacebookF />
+                                            </p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='button-social'>
+                                <div className='outer-btn'>
+                                    <div className="btn transparent-social">
+                                        <button id="sign-in-btn" onClick={signIn}>
+                                            <p className="social-icon">
+                                                <FaGithub />
+                                            </p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='button-social'>
+                                <div className='outer-btn'>
+                                    <div className="btn transparent-social">
+                                        <button id="sign-in-btn" onClick={signIn}>
+                                            <p className="social-icon">
+                                                <FaGoogle />
+                                            </p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='button-social'>
+                                <div className='outer-btn'>
+                                    <div className="btn transparent-social">
+                                        <button id="sign-in-btn" onClick={signIn}>
+                                            <p className="social-icon">
+                                                <FaLinkedin />
+                                            </p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -89,9 +167,15 @@ function login() {
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
                             ex ratione. Aliquid!
                         </p>
-                        <button className="btn transparent" id="sign-up-btn" onClick={signUp}>
-                            Sign up
-                        </button>
+                        <div className='button'>
+                            <div className='outer'>
+                                <div className="btn transparent">
+                                    <button id="sign-up-btn" onClick={signUp}>
+                                        Sign up
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <img src="" className="image" alt="" />
                 </div>
@@ -102,9 +186,15 @@ function login() {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
                             laboriosam ad deleniti.
                         </p>
-                        <button className="btn transparent" id="sign-in-btn" onClick={signIn}>
-                            Sign in
-                        </button>
+                        <div className='button'>
+                            <div className='outer'>
+                                <div className="btn transparent">
+                                    <button id="sign-in-btn" onClick={signIn}>
+                                        Sign in
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <img src="" className="image" alt="" />
                 </div>
@@ -113,4 +203,4 @@ function login() {
     );
 }
 
-export default login;
+export default Login;
