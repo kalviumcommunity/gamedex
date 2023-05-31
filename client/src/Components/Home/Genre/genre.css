@@ -170,7 +170,7 @@
     padding: 5px;
     height: 10vh;
     width: 15vw;
-    transition: background-color 1s;
+    transition: 1s;
     background: linear-gradient(90deg, #005fb3a1, transparent) #2195f300;
 }
 

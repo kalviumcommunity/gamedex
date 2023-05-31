@@ -1,4 +1,3 @@
-import React from 'react'
 import Carousel from './Carousel/Carousel'
 import Genre from './Genre/Genre'
 import List from './List/List'
@@ -13,8 +12,8 @@ const Home = () => {
             setIsLoading(false)
         }, 5000);
     }, [])
-
-    return (isLoading ? (<Loading />) :
+    
+    return ( isLoading ? (<Loading />) :     
         <>
             <Navbar />
             <Carousel />

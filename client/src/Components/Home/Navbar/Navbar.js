@@ -9,17 +9,12 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
 
-  let searchBtn = document.getElementsByClassName('.searchBtn');
-  let closeBtn = document.getElementsByClassName('.closeBtn');
-  const searchBox = document.getElementById('search');
   const [searchButton, setSearchButton] = useState(true)
 
   const handleClick = () => {
       setSearchButton(!searchButton)
   }
 
-  let navigation = document.getElementsByClassName('navigation');
-  let menuToggle = document.getElementsByClassName('menuToggle');
   let header = document.getElementsByClassName('header');
 
   const handleMenuToggle = () => {
@@ -27,21 +22,6 @@ function Navbar() {
     header[0].classList.toggle("open");
   }
 
-  // const handleSearch = () => {
-  //   const searchForm = document.querySelector('.search');
-  //   searchForm.classList.toggle('active');
-  // }
-
-  // const handleHoverEnter = () => {
-  //   const abc = document.getElementById('navbar-links');
-  //   abc.classList.add('skewBackGround');
-
-  // }
-  // const handleHoverLeave = () => {
-  //   const abc = document.getElementById('navbar-links');
-  //   abc.classList.remove('skewBackGround');
-
-  // }
   return (
     <>
       <div className='container_nav'>
@@ -71,25 +51,3 @@ function Navbar() {
 }
 
 export default Navbar
-
-{/* <div className='header-1'>
-          <div className='logo'>
-            <a href="#" id='websiteName'> <img src={image} className="logo-img" /> </a>
-          </div>
-
-
-          <form action="" className="search">
-            <input type="search" name="" placeholder="Search here..." id="search-box" />
-            <label><FaSearch className='search-logo' /></label>
-          </form>
-
-          <div className="icons">
-            <div id="search-btn" onClick={handleSearch}><FaSearch /></div>
-            <div className='nav-btn'>
-              <button className='nav-button'>Bookmarks</button>
-              <button className='nav-button'><PersonIcon />Login</button>
-            </div>
-
-          </div>
-
-        </div> */}

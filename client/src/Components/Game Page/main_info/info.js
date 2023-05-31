@@ -7,13 +7,32 @@ import { Link } from "react-router-dom";
 import slide_image_1 from '../../../assets/watch.png';
 
 function Info() {
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
+  const [data,setData]= useState([]);
+
 
   useEffect(()=>{
     setTimeout(() => {
         setIsLoading(false)
     }, 5000);
 }, [])
+
+useEffect(()=>{
+  console.log(data,"data")
+},[data])
+
+useEffect(()=>{
+  fetch("http://localhost:5000/data")
+   .then((response)=>response.json())
+   .then((data)=>{
+    setData(data);
+    console.log(data,"info");
+   })
+   .catch((err)=>{
+    console.log(err)
+   });
+},[])
+
 
   return ( isLoading ? (<Loading />) :
     <>
