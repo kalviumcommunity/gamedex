@@ -4,13 +4,14 @@ const mongoose = require('mongoose')
 const Game = require("./gameModal/gameModal")
 app.use(express.json())
 const cors = require('cors');
+require('dotenv').config()
 
 app.use(cors());
 
 mongoose.set("strictQuery",false);
 
-mongoose.connect('mongodb://127.0.0.1:27017/gamedex').then(() => {
-    app.listen(5000, () => {
+mongoose.connect(process.env.MongoDblink).then(() => {
+    app.listen(process.env.port, () => {
         console.log('connected!')
     })
 }).catch(err => {
