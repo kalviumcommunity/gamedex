@@ -80,8 +80,7 @@ html{
     position: relative;
     text-decoration: none;
     font-size: 1.7em;
-    background: linear-gradient(
-        to top right, #235cd7, #00ffd0bb);
+    background: linear-gradient(to top right, #235cd7, #00ffd0bb);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: no;
@@ -134,7 +133,7 @@ html{
 }
 
 .searchBox input{
-    width: 100%;
+    width: 100vw;
     border: none;
     outline: none;
     height: 50px;
