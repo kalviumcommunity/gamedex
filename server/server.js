@@ -10,8 +10,8 @@ app.use(cors());
 
 mongoose.set("strictQuery",false);
 
-mongoose.connect(process.env.MongoDblink).then(() => {
-    app.listen(process.env.port, () => {
+mongoose.connect(process.env.MONGO_URL).then(() => {
+    app.listen(process.env.PORT, () => {
         console.log('connected!')
     })
 }).catch(err => {
