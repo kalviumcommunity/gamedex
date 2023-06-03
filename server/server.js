@@ -10,8 +10,8 @@ app.use(cors());
 
 mongoose.set("strictQuery",false);
 
-mongoose.connect(process.env.MongoDblink).then(() => {
-    app.listen(process.env.port, () => {
+mongoose.connect(process.env.MONGO_URL).then(() => {
+    app.listen(process.env.PORT, () => {
         console.log('connected!')
     })
 }).catch(err => {
@@ -30,9 +30,9 @@ app.get("/data",  cors(), async (req, resp) =>{
 })
 
 app.post("/api/game", async (req, resp) => {
-    const { about } = req.body;
+    const { name } = req.body;
     try {
-        const game = await Game.create( about )
+        const game = await Game.create( name )
         resp.json(game)
     } catch (e) {
         resp.status(500).json(e)
