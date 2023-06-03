@@ -33,10 +33,19 @@ const gameSchema = new schema({
 
     recRequired: [
         {
-            specs: {
+            OS: {
                 type: String
             },
-            info: {
+            Processor: {
+                type: String
+            },
+            Memory: {
+                type: String
+            },
+            Graphics: {
+                type: String
+            },
+            Storage: {
                 type: String
             }
         }

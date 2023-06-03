@@ -30,9 +30,9 @@ app.get("/data",  cors(), async (req, resp) =>{
 })
 
 app.post("/api/game", async (req, resp) => {
-    const { about } = req.body;
+    const { name } = req.body;
     try {
-        const game = await Game.create( about )
+        const game = await Game.create( name )
         resp.json(game)
     } catch (e) {
         resp.status(500).json(e)
