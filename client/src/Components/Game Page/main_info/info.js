@@ -10,19 +10,12 @@ function Info() {
   const [isLoading, setIsLoading] = useState(true);
   const [data,setData]= useState([]);
 
-
-  useEffect(()=>{
-    setTimeout(() => {
-        setIsLoading(false)
-    }, 5000);
-}, [])
-
 useEffect(()=>{
   console.log(data,"data")
 },[data])
 
 useEffect(()=>{
-  fetch("http://localhost:5000/data")
+  fetch(`${process.env.REACT_BACKEND_URL}/data`)
    .then((response)=>response.json())
    .then((data)=>{
     setData(data);
@@ -33,6 +26,11 @@ useEffect(()=>{
    }); 
 },[])
 
+useEffect(()=>{
+  setTimeout(() => {
+      setIsLoading(false)
+  }, 5000);
+}, [])
 
   return ( isLoading ? (<Loading />) :
     <>
