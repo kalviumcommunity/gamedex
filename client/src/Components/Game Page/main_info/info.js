@@ -8,31 +8,29 @@ import slide_image_1 from '../../../assets/watch.png';
 
 function Info() {
   const [isLoading, setIsLoading] = useState(true);
-  // const [data,setData]= useState([]);
+  const [data,setData]= useState([]);
 
+useEffect(()=>{
+  console.log(data,"data")
+},[data])
 
-  useEffect(()=>{
-    setTimeout(() => {
-        setIsLoading(false)
-    }, 5000);
+useEffect(()=>{
+  fetch(`${process.env.REACT_BACKEND_URL}/data`)
+   .then((response)=>response.json())
+   .then((data)=>{
+    setData(data);
+    console.log(data,"info");
+   })
+   .catch((err)=>{
+    console.log(err)
+   }); 
+},[])
+
+useEffect(()=>{
+  setTimeout(() => {
+      setIsLoading(false)
+  }, 5000);
 }, [])
-
-// useEffect(()=>{
-//   console.log(data,"data")
-// },[data])
-
-// useEffect(()=>{
-//   fetch("http://localhost:5000/data")
-//    .then((response)=>response.json())
-//    .then((data)=>{
-//     setData(data);
-//     console.log(data,"info");
-//    })
-//    .catch((err)=>{
-//     console.log(err)
-//    });
-// },[])
-
 
   return ( isLoading ? (<Loading />) :
     <>
