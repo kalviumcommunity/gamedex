@@ -14,16 +14,14 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
     app.listen(process.env.PORT, () => {
         console.log('connected!')
     })
-}).catch(err => {
+}).catch(err => { 
     console.log(err);
-})
+}),
 
-
-
-app.get("/data",  cors(), async (req, resp) =>{
+app.get("/data", async (req, resp) =>{
     try {
         const data = await Game.find();
-        resp.status(200).send(data);
+        resp.status(200).json(data);
     } catch (error) {
         console.log(error)
     }
