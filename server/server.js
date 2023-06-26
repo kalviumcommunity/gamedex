@@ -37,4 +37,19 @@ app.post("/api/game", async (req, resp) => {
     }
 })
 
-
+app.put("/:id", async (req, resp )=>{
+    try {
+        console.log(req.params.id)
+        const updateGames = await Game.findOneAndUpdate(
+            {
+                _id:req.params.id
+            },
+            {
+                $set: req.body
+            }
+        );
+        resp.send(updateGames);
+    } catch (e) {
+        resp.status(404).json(e)
+    }
+})
