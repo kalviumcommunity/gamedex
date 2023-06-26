@@ -53,15 +53,3 @@ app.put("/:id", async (req, resp )=>{
         resp.status(404).json(e)
     }
 })
-
-// app.delete("/:id", async (req, resp )=>{
-//     try {
-//         console.log(req.params.id)
-//         const updateGames = await Game.findByIdAndDelete(
-//             req.params.id
-//         );
-//         resp.send(updateGames);
-//     } catch (e) {
-//         resp.status(404).json(e)
-//     }
-// })
