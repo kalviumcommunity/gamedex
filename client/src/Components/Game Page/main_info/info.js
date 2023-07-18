@@ -3,34 +3,36 @@ import Navbar from '../../Home/Navbar/Navbar';
 import React,{ useState, useEffect } from 'react';
 import Loading from '../../Loading/Loading';
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 import slide_image_1 from '../../../assets/watch.png';
 
 function Info() {
   const [isLoading, setIsLoading] = useState(true);
   const [data,setData]= useState([]);
+  
+  console.log(process.env.REACT_APP_URL)
 
 useEffect(()=>{
   console.log(data,"data")
-},[data])
-
-useEffect(()=>{
-  fetch(`${process.env.REACT_BACKEND_URL}/data`)
+  fetch(`${process.env.REACT_APP_URL}/data`)
    .then((response)=>response.json())
    .then((data)=>{
     setData(data);
     console.log(data,"info");
    })
    .catch((err)=>{
-    console.log(err)
-   }); 
-},[])
+    console.log(err.message)
+   });
+},[data])
+
 
 useEffect(()=>{
   setTimeout(() => {
       setIsLoading(false)
   }, 5000);
 }, [])
+
 
   return ( isLoading ? (<Loading />) :
     <>
