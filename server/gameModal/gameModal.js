@@ -62,16 +62,15 @@ const gameSchema = new schema({
         {
             image: {
                 type: Array
-            }
-        }
-        ,
-        {
+            },
+
             video: {
                 type: String
             }
         }
     ]
     ,
+    
     trailer: {
         type: String
     }
