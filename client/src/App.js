@@ -19,6 +19,7 @@ function App() {
     }, 19000);
   }, [])
 
+
   return ( isLoading ? (<Intro />) :
     <div className="App">
       <Routes>

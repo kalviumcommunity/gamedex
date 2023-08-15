@@ -1,12 +1,14 @@
+const Router =require('./Routes/Routes.js')
 const express = require('express')
 const app = express();
 const mongoose = require('mongoose')
-const Game = require("./gameModal/gameModal")
-app.use(express.json())
+const Game = require("./Modal/gameModal")
 const cors = require('cors');
 require('dotenv').config()
 
+app.use(express.json())
 app.use(cors());
+app.use('/', Router);
 
 mongoose.set("strictQuery",false);
 

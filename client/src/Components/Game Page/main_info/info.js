@@ -9,7 +9,7 @@ import slide_image_1 from '../../../assets/watch.png';
 
 function Info() {
   const [isLoading, setIsLoading] = useState(true);
-  const [data,setData]= useState([]);
+  const [data,setData]= useState([]); 
   
   console.log(process.env.REACT_APP_URL)
 
@@ -23,6 +23,8 @@ useEffect(()=>{
    })
    .catch((err)=>{
     console.log(err.message)
+  return () => {}
+    
    });
 },[data])
 
