@@ -103,10 +103,22 @@ form.sign-in-form {
   padding: 0 0.4rem;
   position: relative;
 }
+.form-name{
+  display: flex;
+  max-width: 380px;
+  width: 100%;
+  gap: 10px;
+}
+
+.error{
+  color: red;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
 
 .input-field i {
   text-align: center;
-  line-height: 55px;
+  line-height: 50px;
   color: #acacac;
   transition: 0.5s;
   font-size: 1.1rem;
@@ -151,12 +163,12 @@ form.sign-in-form {
   background-color: red;
   border: none;
   outline: none;
-  height: 49px;
+  height: 45px;
   border-radius: 49px;
   color: #fff;
   text-transform: uppercase;
   font-weight: 600;
-  margin: 10px 0;
+  margin: 5px 0;
   cursor: pointer;
   transition: 0.5s;
 }
